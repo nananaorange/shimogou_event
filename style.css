@@ -46,7 +46,8 @@
   background-image : url(form-bg.png);
   background-attachment: fixed;
   background-size: cover;
-  /*padding-top: 60px;*/
+  padding-top: 60px;
+  height: 800px;
 }
 
 .main h1{
