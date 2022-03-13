@@ -28,7 +28,26 @@
               <p>感想</p>
               <textarea id="b-body"></textarea>
               <p>投稿前に内容を確認！</p>
-              <input class="submit-btn" type="submit" value="投稿">
+
+              <script>
+                async function form_send(){
+                  const nameText = document.getElementById("b-name")
+                  const bodyText = document.getElementById("b-body")
+                  const inputName = nameText.value
+                  const inputBody = bodyText.value
+                  alert("投稿されました")
+
+                  let url="https://script.google.com/macros/s/AKfycbxuzonLDgSLrVVsHrD2aBVYvihCV41HIXPOC0yGuzHgVCterQDmJjgHoatApl5py7Jl6g/exec?"
+                  //&変数名= でGASに渡したいものを付け足していく
+                  url += "name=" + inputName + "&body=" + inputBody
+                  //console.log(url)
+
+                  const response = await fetch(url,{headers: { 'Content-Type': 'text/plain'}})
+                  console.log(result)
+                }
+              </script>
+
+              <input class="submit-btn" type="submit" value="投稿" onclick="form_send()">
             </div>
           </div>
 
