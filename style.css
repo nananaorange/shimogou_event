@@ -61,6 +61,10 @@
   height: 520px;
 }
 
+.greeting{
+  text-align: center;
+}
+
 .board-right{
   height: 400px;
   background-color: rgba(255,255,255,0.8);
@@ -197,7 +201,6 @@ textarea{
   }
 
   .board-right-wrapper{
-    text-align: center;
     width: 100%;
     position: absolute;
     top: 0;
